@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 쇼핑몰 - 상품 리스트</title>
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+    <!-- 메인 컨테이너: 전체 레이아웃을 감싸는 최상위 요소 -->
+    <div class="container">
+        <!-- 페이지 제목 섹션 -->
+        <header class="page-header">
+            <h1>인기 상품</h1>
+            <p class="subtitle">최고의 품질과 합리적인 가격으로 만나보세요</p>
+        </header>
+
+        <!-- 상품 그리드 섹션: 반응형 그리드 레이아웃으로 상품 카드들을 배치 -->
+        <section class="products-section">
+            <!-- 상품 카드 1 -->
+            <article class="product-card">
+                <!-- 상품 이미지 영역 -->
+                <div class="product-image-wrapper">
+                    <img src="https://via.placeholder.com/300x300?text=상품1" alt="프리미엄 상품 1" class="product-image">
+                    <!-- 할인율 뱃지: 상품 이미지 위에 오버레이로 표시 -->
+                    <span class="discount-badge">25%</span>
+                </div>
+                <!-- 상품 정보 영역 -->
+                <div class="product-info">
+                    <h2 class="product-name">프리미엄 상품 1</h2>
+                    <!-- 가격 정보: 할인 전 가격과 할인 후 가격을 함께 표시 -->
+                    <div class="price-section">
+                        <span class="current-price">₩29,900</span>
+                        <span class="original-price">₩39,900</span>
+                    </div>
+                    <!-- 장바구니 버튼 -->
+                    <button class="cart-button" aria-label="장바구니에 추가">
+                        <span class="cart-icon">🛒</span>
+                        장바구니
+                    </button>
+                </div>
+            </article>
+
+            <!-- 상품 카드 2 -->
+            <article class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="https://via.placeholder.com/300x300?text=상품2" alt="프리미엄 상품 2" class="product-image">
+                    <span class="discount-badge">30%</span>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-name">프리미엄 상품 2</h2>
+                    <div class="price-section">
+                        <span class="current-price">₩19,900</span>
+                        <span class="original-price">₩28,500</span>
+                    </div>
+                    <button class="cart-button" aria-label="장바구니에 추가">
+                        <span class="cart-icon">🛒</span>
+                        장바구니
+                    </button>
+                </div>
+            </article>
+
+            <!-- 상품 카드 3 -->
+            <article class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="https://via.placeholder.com/300x300?text=상품3" alt="프리미엄 상품 3" class="product-image">
+                    <span class="discount-badge">15%</span>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-name">프리미엄 상품 3</h2>
+                    <div class="price-section">
+                        <span class="current-price">₩24,900</span>
+                        <span class="original-price">₩29,300</span>
+                    </div>
+                    <button class="cart-button" aria-label="장바구니에 추가">
+                        <span class="cart-icon">🛒</span>
+                        장바구니
+                    </button>
+                </div>
+            </article>
+
+            <!-- 상품 카드 4 -->
+            <article class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="https://via.placeholder.com/300x300?text=상품4" alt="프리미엄 상품 4" class="product-image">
+                    <span class="discount-badge">20%</span>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-name">프리미엄 상품 4</h2>
+                    <div class="price-section">
+                        <span class="current-price">₩34,900</span>
+                        <span class="original-price">₩43,600</span>
+                    </div>
+                    <button class="cart-button" aria-label="장바구니에 추가">
+                        <span class="cart-icon">🛒</span>
+                        장바구니
+                    </button>
+                </div>
+            </article>
+
+            <!-- 상품 카드 5 -->
+            <article class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="https://via.placeholder.com/300x300?text=상품5" alt="프리미엄 상품 5" class="product-image">
+                    <span class="discount-badge">35%</span>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-name">프리미엄 상품 5</h2>
+                    <div class="price-section">
+                        <span class="current-price">₩27,900</span>
+                        <span class="original-price">₩42,900</span>
+                    </div>
+                    <button class="cart-button" aria-label="장바구니에 추가">
+                        <span class="cart-icon">🛒</span>
+                        장바구니
+                    </button>
+                </div>
+            </article>
+
+            <!-- 상품 카드 6 -->
+            <article class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="https://via.placeholder.com/300x300?text=상품6" alt="프리미엄 상품 6" class="product-image">
+                    <span class="discount-badge">10%</span>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-name">프리미엄 상품 6</h2>
+                    <div class="price-section">
+                        <span class="current-price">₩22,900</span>
+                        <span class="original-price">₩25,400</span>
+                    </div>
+                    <button class="cart-button" aria-label="장바구니에 추가">
+                        <span class="cart-icon">🛒</span>
+                        장바구니
+                    </button>
+                </div>
+            </article>
+
+            <!-- 상품 카드 7 -->
+            <article class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="https://via.placeholder.com/300x300?text=상품7" alt="프리미엄 상품 7" class="product-image">
+                    <span class="discount-badge">40%</span>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-name">프리미엄 상품 7</h2>
+                    <div class="price-section">
+                        <span class="current-price">₩18,900</span>
+                        <span class="original-price">₩31,500</span>
+                    </div>
+                    <button class="cart-button" aria-label="장바구니에 추가">
+                        <span class="cart-icon">🛒</span>
+                        장바구니
+                    </button>
+                </div>
+            </article>
+
+            <!-- 상품 카드 8 -->
+            <article class="product-card">
+                <div class="product-image-wrapper">
+                    <img src="https://via.placeholder.com/300x300?text=상품8" alt="프리미엄 상품 8" class="product-image">
+                    <span class="discount-badge">18%</span>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-name">프리미엄 상품 8</h2>
+                    <div class="price-section">
+                        <span class="current-price">₩31,900</span>
+                        <span class="original-price">₩38,900</span>
+                    </div>
+                    <button class="cart-button" aria-label="장바구니에 추가">
+                        <span class="cart-icon">🛒</span>
+                        장바구니
+                    </button>
+                </div>
+            </article>
+        </section>
+    </div>
+</body>
+</html>
+
