@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 문서의 문자 인코딩 설정 (한글 지원) -->
+    <meta charset="UTF-8">
+    <!-- 반응형 웹을 위한 뷰포트 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 페이지 제목 -->
+    <title>게시글 작성</title>
+    <!-- 외부 CSS 파일 연결 (게시판 목록 페이지와 동일한 스타일시트 사용) -->
+    <link rel="stylesheet" href="board.css">
+</head>
+<body>
+    <!-- 
+        ============================================
+        헤더 영역 (Header)
+        ============================================
+        페이지 최상단에 위치하는 고정 영역
+        게시판 목록 페이지와 동일한 헤더 구조 사용
+    -->
+    <header class="header">
+        <!-- 헤더 내부 컨텐츠를 감싸는 컨테이너 -->
+        <div class="container">
+            <!-- 사이트 로고 또는 제목 (게시판 목록으로 이동 가능) -->
+            <h1 class="logo">
+                <a href="board.html" style="color: #fff; text-decoration: none;">게시판</a>
+            </h1>
+            <!-- 네비게이션 메뉴 -->
+            <nav class="nav">
+                <a href="#" class="nav-link">홈</a>
+                <a href="board.html" class="nav-link">게시판</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 
+        ============================================
+        메인 컨텐츠 영역 (Main Content)
+        ============================================
+        페이지의 핵심 내용이 들어가는 영역
+        게시판 제목 영역과 글쓰기 폼이 포함됨
+    -->
+    <main class="main">
+        <div class="container">
+            
+            <!-- 
+                ============================================
+                게시판 제목 영역 (Board Title Section)
+                ============================================
+                게시판의 이름과 설명을 표시하는 영역
+                게시판 목록 페이지와 동일한 구조 사용
+            -->
+            <section class="board-title-section">
+                <!-- 게시판 제목 -->
+                <h2 class="board-title">자유게시판</h2>
+                <!-- 게시판 설명 -->
+                <p class="board-description">자유롭게 글을 작성하고 소통할 수 있는 공간입니다.</p>
+            </section>
+
+            <!-- 
+                ============================================
+                글쓰기 폼 영역 (Write Form Section)
+                ============================================
+                게시글 작성에 필요한 입력 필드들이 들어가는 영역
+                제목 입력과 본문 입력 필드 포함
+            -->
+            <section class="write-form-section">
+                <!-- 
+                    글쓰기 폼 컨테이너
+                    form 태그를 사용하여 폼 구조를 명확하게 표현
+                    (실제 저장 기능은 구현하지 않으므로 action과 method는 생략)
+                -->
+                <form class="write-form" action="#" method="post">
+                    
+                    <!-- 
+                        ============================================
+                        제목 입력 그룹 (Title Input Group)
+                        ============================================
+                        게시글 제목을 입력하는 필드와 라벨을 묶는 그룹
+                    -->
+                    <div class="form-group">
+                        <!-- 제목 입력 필드의 라벨 -->
+                        <label for="title" class="form-label">
+                            제목
+                            <!-- 필수 입력 표시 (빨간 별표) -->
+                            <span class="required">*</span>
+                        </label>
+                        <!-- 제목 입력 필드 (input 태그 사용) -->
+                        <input 
+                            type="text" 
+                            id="title" 
+                            name="title" 
+                            class="form-input title-input" 
+                            placeholder="게시글 제목을 입력하세요"
+                            required
+                        >
+                    </div>
+
+                    <!-- 
+                        ============================================
+                        본문 입력 그룹 (Content Input Group)
+                        ============================================
+                        게시글 본문을 입력하는 필드와 라벨을 묶는 그룹
+                    -->
+                    <div class="form-group">
+                        <!-- 본문 입력 필드의 라벨 -->
+                        <label for="content" class="form-label">
+                            본문
+                            <!-- 필수 입력 표시 (빨간 별표) -->
+                            <span class="required">*</span>
+                        </label>
+                        <!-- 본문 입력 필드 (textarea 태그 사용) -->
+                        <textarea 
+                            id="content" 
+                            name="content" 
+                            class="form-textarea content-textarea" 
+                            placeholder="게시글 내용을 입력하세요"
+                            required
+                        ></textarea>
+                    </div>
+
+                </form>
+                <!-- write-form 끝 -->
+            </section>
+            <!-- write-form-section 끝 -->
+
+            <!-- 
+                ============================================
+                버튼 영역 (Button Section)
+                ============================================
+                등록 버튼과 취소 버튼이 들어가는 영역
+                폼 외부에 위치하여 레이아웃의 유연성 확보
+            -->
+            <section class="button-section">
+                <!-- 버튼 그룹 컨테이너 -->
+                <div class="button-group">
+                    <!-- 
+                        취소 버튼
+                        게시판 목록 페이지로 돌아가는 버튼
+                        링크(a 태그)로 구현하여 JavaScript 없이도 동작 가능
+                    -->
+                    <a href="board.html" class="btn btn-secondary">
+                        취소
+                    </a>
+                    
+                    <!-- 
+                        등록 버튼
+                        게시글을 등록하는 버튼
+                        버튼(button 태그)으로 구현
+                        (실제 저장 기능은 구현하지 않으므로 type="submit" 대신 type="button" 사용)
+                    -->
+                    <button type="button" class="btn btn-primary">
+                        등록
+                    </button>
+                </div>
+                <!-- button-group 끝 -->
+            </section>
+            <!-- button-section 끝 -->
+
+        </div>
+        <!-- container 끝 -->
+    </main>
+    <!-- main 끝 -->
+
+    <!-- 
+        ============================================
+        푸터 영역 (Footer)
+        ============================================
+        페이지 하단에 위치하는 영역
+        게시판 목록 페이지와 동일한 푸터 구조 사용
+    -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2024 게시판. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
