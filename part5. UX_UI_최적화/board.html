@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="자유롭게 글을 작성하고 소통할 수 있는 게시판입니다.">
+    <title>게시판 목록</title>
+    <link rel="stylesheet" href="board.css">
+    <script src="board.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">게시판</h1>
+            <nav class="nav" aria-label="주요 네비게이션">
+                <a href="#" class="nav-link">홈</a>
+                <a href="board.html" class="nav-link" aria-current="page">게시판</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="board-title-section" aria-labelledby="board-title">
+                <h2 id="board-title" class="board-title">자유게시판</h2>
+                <p class="board-description">자유롭게 글을 작성하고 소통할 수 있는 공간입니다.</p>
+            </section>
+
+            <!-- 
+                ============================================
+                검색 영역 (Search Section)
+                ============================================
+                게시글을 검색하는 입력 필드와 검색 버튼이 들어가는 영역
+                게시판 제목 영역과 게시글 목록 영역 사이에 자연스럽게 배치됨
+            -->
+            <section class="search-section" aria-label="게시글 검색 및 정렬">
+                <form class="search-form" action="#" method="get" role="search">
+                    <input 
+                        type="text" 
+                        id="search-keyword" 
+                        name="keyword" 
+                        class="search-input" 
+                        placeholder="검색어를 입력하세요"
+                        aria-label="검색어 입력"
+                    >
+                    <button type="button" class="search-btn" aria-label="검색 실행">
+                        검색
+                    </button>
+                    <select id="sort-filter" name="sort" class="filter-select" aria-label="정렬 방식 선택">
+                        <option value="latest" selected>최신순</option>
+                        <option value="oldest">오래된순</option>
+                    </select>
+                </form>
+            </section>
+
+            <!-- 
+                ============================================
+                게시글 목록 영역 (Post List Section)
+                ============================================
+                게시글들을 리스트 형태로 표시하는 영역
+                테이블이 아닌 div 기반의 리스트 구조 사용
+            -->
+            <section class="post-list-section" aria-label="게시글 목록">
+                <!-- 
+                    변경 이유: HTML에 하드코딩된 게시글을 제거하고 빈 컨테이너만 유지
+                    - 데이터와 렌더링 로직 분리: 데이터는 JavaScript에서 관리
+                    - 동적 렌더링: JavaScript에서 게시글을 동적으로 생성하여 유연성 확보
+                    - 중복 코드 제거: 반복되는 HTML 구조를 JavaScript 함수로 추출
+                -->
+                <div class="post-list" role="list">
+                    <!-- 게시글 목록은 JavaScript에서 동적으로 렌더링됩니다 -->
+                </div>
+            </section>
+
+            <!-- 
+                ============================================
+                페이지네이션 영역 (Pagination Section)
+                ============================================
+                여러 페이지가 있을 때 페이지를 이동할 수 있는 영역
+                이전 페이지, 페이지 번호, 다음 페이지 버튼 포함
+                게시글 목록 하단에 자연스럽게 배치됨
+            -->
+            <nav class="pagination-section" aria-label="페이지 네비게이션">
+                <div class="pagination" role="navigation">
+                    <a href="#" class="pagination-btn pagination-prev" aria-label="이전 페이지">
+                        <span class="pagination-btn-text">이전</span>
+                    </a>
+                    <div class="pagination-numbers" role="list">
+                        <a href="#" class="pagination-number" role="listitem" aria-label="1페이지로 이동">1</a>
+                        <a href="#" class="pagination-number pagination-number-active" role="listitem" aria-label="2페이지 (현재 페이지)" aria-current="page">2</a>
+                        <a href="#" class="pagination-number" role="listitem" aria-label="3페이지로 이동">3</a>
+                        <a href="#" class="pagination-number" role="listitem" aria-label="4페이지로 이동">4</a>
+                        <a href="#" class="pagination-number" role="listitem" aria-label="5페이지로 이동">5</a>
+                    </div>
+                    <a href="#" class="pagination-btn pagination-next" aria-label="다음 페이지">
+                        <span class="pagination-btn-text">다음</span>
+                    </a>
+                </div>
+            </nav>
+
+        </div>
+        <!-- container 끝 -->
+    </main>
+    <!-- main 끝 -->
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2024 게시판. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

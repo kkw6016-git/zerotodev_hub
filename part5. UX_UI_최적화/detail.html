@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 문서의 문자 인코딩 설정 (한글 지원) -->
+    <meta charset="UTF-8">
+    <!-- 반응형 웹을 위한 뷰포트 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 페이지 제목 -->
+    <title>게시글 상세</title>
+    <!-- 외부 CSS 파일 연결 (게시판 목록 페이지와 동일한 스타일시트 사용) -->
+    <link rel="stylesheet" href="board.css">
+</head>
+<body>
+    <!-- 
+        ============================================
+        헤더 영역 (Header)
+        ============================================
+        페이지 최상단에 위치하는 고정 영역
+        게시판 목록 페이지와 동일한 헤더 구조 사용
+    -->
+    <header class="header">
+        <!-- 헤더 내부 컨텐츠를 감싸는 컨테이너 -->
+        <div class="container">
+            <!-- 사이트 로고 또는 제목 (게시판 목록으로 이동 가능) -->
+            <h1 class="logo">
+                <a href="board.html" style="color: #fff; text-decoration: none;">게시판</a>
+            </h1>
+            <!-- 네비게이션 메뉴 -->
+            <nav class="nav">
+                <a href="#" class="nav-link">홈</a>
+                <a href="board.html" class="nav-link">게시판</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 
+        ============================================
+        메인 컨텐츠 영역 (Main Content)
+        ============================================
+        페이지의 핵심 내용이 들어가는 영역
+        게시판 제목, 게시글 내용, 댓글 영역이 포함됨
+    -->
+    <main class="main">
+        <div class="container">
+            
+            <!-- 
+                ============================================
+                게시판 제목 영역 (Board Title Section)
+                ============================================
+                게시판의 이름과 설명을 표시하는 영역
+                게시판 목록 페이지와 동일한 구조 사용
+            -->
+            <section class="board-title-section">
+                <!-- 게시판 제목 -->
+                <h2 class="board-title">자유게시판</h2>
+                <!-- 게시판 설명 -->
+                <p class="board-description">자유롭게 글을 작성하고 소통할 수 있는 공간입니다.</p>
+            </section>
+
+            <!-- 
+                ============================================
+                게시글 상세 영역 (Post Detail Section)
+                ============================================
+                게시글의 제목, 작성자, 작성일, 조회수, 본문 내용을 표시하는 영역
+            -->
+            <article class="post-detail-section">
+                <!-- 게시글 제목 -->
+                <h3 class="post-detail-title">게시글 제목 예시입니다</h3>
+                
+                <!-- 게시글 메타 정보 (작성자, 작성일, 조회수) -->
+                <div class="post-detail-meta">
+                    <!-- 작성자 -->
+                    <span class="post-detail-author">작성자: 홍길동</span>
+                    <!-- 작성일 -->
+                    <span class="post-detail-date">2024.01.15 14:30</span>
+                    <!-- 조회수 -->
+                    <span class="post-detail-views">조회수: 123</span>
+                </div>
+
+                <!-- 게시글 본문 내용 -->
+                <div class="post-detail-content">
+                    <p>이것은 게시글 본문 내용입니다. 여러 줄의 텍스트가 들어갈 수 있습니다.</p>
+                    <p>두 번째 단락의 내용입니다. 게시글의 본문은 여러 단락으로 구성될 수 있습니다.</p>
+                    <p>세 번째 단락의 내용입니다. 사용자가 작성한 내용이 여기에 표시됩니다.</p>
+                </div>
+            </article>
+            <!-- post-detail-section 끝 -->
+
+            <!-- 
+                ============================================
+                댓글 영역 (Comment Section)
+                ============================================
+                댓글 입력과 댓글 목록이 들어가는 영역
+                게시글 하단에 자연스럽게 배치됨
+            -->
+            <section class="comment-section">
+                <!-- 댓글 섹션 제목 -->
+                <h4 class="comment-section-title">댓글 <span class="comment-count">(3)</span></h4>
+
+                <!-- 
+                    ============================================
+                    댓글 입력 영역 (Comment Input Section)
+                    ============================================
+                    댓글을 작성하는 입력 필드와 등록 버튼이 들어가는 영역
+                -->
+                <div class="comment-input-section">
+                    <!-- 댓글 입력 폼 -->
+                    <form class="comment-form">
+                        <!-- 댓글 입력 필드 -->
+                        <textarea 
+                            class="comment-input" 
+                            placeholder="댓글을 입력하세요"
+                            rows="4"
+                        ></textarea>
+                        <!-- 댓글 등록 버튼 -->
+                        <div class="comment-submit-wrapper">
+                            <button type="button" class="btn btn-primary comment-submit-btn">
+                                등록
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <!-- comment-input-section 끝 -->
+
+                <!-- 
+                    ============================================
+                    댓글 목록 영역 (Comment List Section)
+                    ============================================
+                    작성된 댓글들을 리스트 형태로 표시하는 영역
+                -->
+                <div class="comment-list">
+                    
+                    <!-- 
+                        ============================================
+                        댓글 아이템 1 (Comment Item)
+                        ============================================
+                        각 댓글을 나타내는 개별 요소
+                        작성자, 내용, 작성 시간 정보 포함
+                    -->
+                    <div class="comment-item">
+                        <!-- 댓글 작성자 -->
+                        <div class="comment-author">김철수</div>
+                        <!-- 댓글 내용 -->
+                        <div class="comment-content">
+                            좋은 글 감사합니다! 많은 도움이 되었어요.
+                        </div>
+                        <!-- 댓글 작성 시간 -->
+                        <div class="comment-date">2024.01.15 15:20</div>
+                    </div>
+
+                    <!-- 댓글 아이템 2 -->
+                    <div class="comment-item">
+                        <div class="comment-author">이영희</div>
+                        <div class="comment-content">
+                            정말 유용한 정보네요. 공유해주셔서 감사합니다.
+                        </div>
+                        <div class="comment-date">2024.01.15 16:45</div>
+                    </div>
+
+                    <!-- 댓글 아이템 3 -->
+                    <div class="comment-item">
+                        <div class="comment-author">박민수</div>
+                        <div class="comment-content">
+                            추가로 궁금한 점이 있는데, 더 자세한 설명이 가능할까요?
+                        </div>
+                        <div class="comment-date">2024.01.16 09:10</div>
+                    </div>
+
+                </div>
+                <!-- comment-list 끝 -->
+
+            </section>
+            <!-- comment-section 끝 -->
+
+            <!-- 
+                ============================================
+                버튼 영역 (Button Section)
+                ============================================
+                목록으로 돌아가기 버튼이 들어가는 영역
+                댓글 영역 하단에 배치
+            -->
+            <section class="button-section">
+                <!-- 버튼 그룹 컨테이너 -->
+                <div class="button-group">
+                    <!-- 목록으로 돌아가기 버튼 -->
+                    <a href="board.html" class="btn btn-secondary">
+                        목록
+                    </a>
+                </div>
+                <!-- button-group 끝 -->
+            </section>
+            <!-- button-section 끝 -->
+
+        </div>
+        <!-- container 끝 -->
+    </main>
+    <!-- main 끝 -->
+
+    <!-- 
+        ============================================
+        푸터 영역 (Footer)
+        ============================================
+        페이지 하단에 위치하는 영역
+        게시판 목록 페이지와 동일한 푸터 구조 사용
+    -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2024 게시판. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
